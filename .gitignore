@@ -1,4 +1,8 @@
 # Generated evidence artifacts for local runs
 
 evidence/tmp/
+evidence/tmp-agreement/
 evidence/*latest.json
+evidence/gate-edit-validation.json
+evidence/gate-signature-validation.json
+evidence/gate-agreement-validation.json
