@@ -12,6 +12,14 @@ EDITOR: B1C3
 -->
 Define the first concept to run through A1 scaffold and A2 implementation.
 
+<!-- EDIT
+UID: a1-uuid
+TIMESTAMP: 2026-03-30T20:42:37Z
+INTENT: hello world contribution
+EDITOR: Wijak
+-->
+Hello from A1. Ready to scaffold when you define the concept.
+
 ## Notes
 
 - Keep one edit block per logical change.
