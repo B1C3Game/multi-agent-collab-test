@@ -1,0 +1,33 @@
+﻿{
+    "signatureChainInput":  {
+                                "trustConfigPath":  "trust-config.json",
+                                "a1SignaturePath":  "signatures/task-001-a1-signature.md",
+                                "a2SignaturePath":  "evidence/tmp/a2-tampered.md",
+                                "captainSignaturePath":  "signatures/task-001-captain-signature.md"
+                            },
+    "signatureChainResult":  {
+                                 "status":  "fail",
+                                 "checks":  [
+                                                {
+                                                    "id":  "S1_ROLE_UID_MAPPING",
+                                                    "passed":  false,
+                                                    "reason":  "role mismatch in evidence/tmp/a2-tampered.md"
+                                                },
+                                                {
+                                                    "id":  "S2_SIGNATURE_HASHES",
+                                                    "passed":  true,
+                                                    "reason":  "Signature claim hashes are valid."
+                                                },
+                                                {
+                                                    "id":  "S3_SIGNATURE_TIMESTAMPS",
+                                                    "passed":  true,
+                                                    "reason":  "Signature timestamps are valid and monotonic."
+                                                },
+                                                {
+                                                    "id":  "S4_PAYLOAD_REFERENCE",
+                                                    "passed":  true,
+                                                    "reason":  "All signatures reference the same valid payload and hash."
+                                                }
+                                            ]
+                             }
+}

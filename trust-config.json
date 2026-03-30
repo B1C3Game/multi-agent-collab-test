@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "trusted_uids": [
+    "b1c3-uuid",
+    "a1-uuid",
+    "a2-uuid"
+  ],
+  "conditionally_trusted_uids": [
+    "unknown"
+  ],
+  "blocked_uids": [
+    "untrusted"
+  ],
+  "timestamp": {
+    "allowFutureSeconds": 300,
+    "maxAgeDays": 366
+  }
+}

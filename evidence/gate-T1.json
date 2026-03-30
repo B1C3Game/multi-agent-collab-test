@@ -1,0 +1,9 @@
+﻿{
+    "collabGate":  {
+                       "status":  "pass",
+                       "editValidationExitCode":  0,
+                       "signatureValidationExitCode":  0,
+                       "editValidationJson":  "evidence/gate-edit-validation.json",
+                       "signatureValidationJson":  "evidence/gate-signature-validation.json"
+                   }
+}

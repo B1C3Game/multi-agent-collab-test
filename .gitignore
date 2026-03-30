@@ -1,0 +1,4 @@
+# Generated evidence artifacts for local runs
+
+evidence/tmp/
+evidence/*latest.json
