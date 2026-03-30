@@ -67,15 +67,26 @@ Participants:
 - Wijak (A1 scaffolder)
 - Copilot (A2 builder)
 
-## Next Steps
+## Standards Alignment
 
-1. Define first shared task in SHARED.md.
-2. Configure trusted UID list in trust-config.json.
-3. Run validate-edits.ps1 after each edit round.
-4. Run verify-signature-chain.ps1 for A1/A2/Captain handoff checks.
-5. Run verify-agreement.ps1 to ensure all trusted UIDs have signed agreement.
-6. Run gate.ps1 to enforce edit, agreement, and signature checks.
-7. Optional: run sync-script.ps1 for periodic git sync.
+This project does not replace existing standards. It layers on top of them.
+
+- Standard layer: git history, signed commits, DCO-style sign-off, CODEOWNERS review.
+- Protocol layer: UID-attributed edits, trust-policy checks, signature-chain checks, agreement checks.
+
+See:
+- STANDARDS-MAPPING.md
+- CONTRIBUTING.md
+- .github/CODEOWNERS
+
+## Recommended Local Flow
+
+1. Run validate-edits.ps1 to validate UID attribution and trust policy.
+2. Run verify-signature-chain.ps1 to validate A1 -> A2 -> Captain handoff.
+3. Run verify-agreement.ps1 to ensure trusted UIDs signed AGENT-AGREEMENT.md.
+4. Run gate.ps1 to enforce all required checks.
+5. Optional: run verify-git-provenance.ps1 for commit signature and DCO visibility.
+6. Optional: run sync-script.ps1 for periodic git sync.
 
 ## Commands
 
@@ -101,6 +112,12 @@ Run gate:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File "gate.ps1"
+```
+
+Optional git provenance checks:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File "verify-git-provenance.ps1"
 ```
 
 ## Evidence
