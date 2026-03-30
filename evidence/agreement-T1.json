@@ -1,0 +1,26 @@
+﻿{
+    "agreementValidationInput":  {
+                                     "agreementPath":  "AGENT-AGREEMENT.md",
+                                     "trustConfigPath":  "trust-config.json"
+                                 },
+    "agreementValidationResult":  {
+                                      "status":  "pass",
+                                      "checks":  [
+                                                     {
+                                                         "id":  "A1_SIGNATURES_PRESENT",
+                                                         "passed":  true,
+                                                         "reason":  "Found 3 agreement signature(s)."
+                                                     },
+                                                     {
+                                                         "id":  "A2_TRUSTED_UIDS_SIGNED",
+                                                         "passed":  true,
+                                                         "reason":  "All trusted UIDs have signed the agreement."
+                                                     },
+                                                     {
+                                                         "id":  "A3_SIGNATURE_HASHES",
+                                                         "passed":  true,
+                                                         "reason":  "Agreement signature hashes are valid."
+                                                     }
+                                                 ]
+                                  }
+}

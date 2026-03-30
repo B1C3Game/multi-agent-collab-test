@@ -54,6 +54,7 @@ multi-agent-colab-test/
 	- task-001-captain-signature.md
 - sync-script.ps1
 - validate-edits.ps1
+- verify-agreement.ps1
 - verify-signature-chain.ps1
 - gate.ps1
 
@@ -72,8 +73,9 @@ Participants:
 2. Configure trusted UID list in trust-config.json.
 3. Run validate-edits.ps1 after each edit round.
 4. Run verify-signature-chain.ps1 for A1/A2/Captain handoff checks.
-5. Run gate.ps1 to enforce both edit and signature checks.
-6. Optional: run sync-script.ps1 for periodic git sync.
+5. Run verify-agreement.ps1 to ensure all trusted UIDs have signed agreement.
+6. Run gate.ps1 to enforce edit, agreement, and signature checks.
+7. Optional: run sync-script.ps1 for periodic git sync.
 
 ## Commands
 
@@ -89,6 +91,12 @@ Validate signature chain:
 powershell -NoProfile -ExecutionPolicy Bypass -File "verify-signature-chain.ps1"
 ```
 
+Validate contributor agreement:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File "verify-agreement.ps1"
+```
+
 Run gate:
 
 ```powershell
@@ -99,5 +107,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "gate.ps1"
 
 - Baseline edit validation: `evidence/validation-latest.json`
 - Baseline signature-chain validation: `evidence/signature-chain-T1.json`
-- Baseline gate pass: `evidence/gate-T1.json`
+- Baseline agreement validation: `evidence/agreement-T1.json`
+- Baseline gate pass: `evidence/gate-T3.json`
 - Tampered signature gate fail: `evidence/gate-T2.json`
+- Tampered agreement gate fail: `evidence/gate-T4.json`

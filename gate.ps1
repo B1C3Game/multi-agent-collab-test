@@ -1,6 +1,7 @@
 param(
     [string]$FilePath = "SHARED.md",
     [string]$TrustConfigPath = "trust-config.json",
+    [string]$AgreementPath = "AGENT-AGREEMENT.md",
     [string]$A1SignaturePath = "signatures/task-001-a1-signature.md",
     [string]$A2SignaturePath = "signatures/task-001-a2-signature.md",
     [string]$CaptainSignaturePath = "signatures/task-001-captain-signature.md",
@@ -10,23 +11,29 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $editOut = "evidence/gate-edit-validation.json"
+$agreementOut = "evidence/gate-agreement-validation.json"
 $sigOut = "evidence/gate-signature-validation.json"
 
 powershell -NoProfile -ExecutionPolicy Bypass -File "validate-edits.ps1" -FilePath $FilePath -TrustConfigPath $TrustConfigPath -OutputJsonPath $editOut | Out-Null
 $editCode = $LASTEXITCODE
 
+powershell -NoProfile -ExecutionPolicy Bypass -File "verify-agreement.ps1" -AgreementPath $AgreementPath -TrustConfigPath $TrustConfigPath -OutputJsonPath $agreementOut | Out-Null
+$agreementCode = $LASTEXITCODE
+
 powershell -NoProfile -ExecutionPolicy Bypass -File "verify-signature-chain.ps1" -TrustConfigPath $TrustConfigPath -A1SignaturePath $A1SignaturePath -A2SignaturePath $A2SignaturePath -CaptainSignaturePath $CaptainSignaturePath -OutputJsonPath $sigOut | Out-Null
 $sigCode = $LASTEXITCODE
 
-$passed = ($editCode -eq 0) -and ($sigCode -eq 0)
+$passed = ($editCode -eq 0) -and ($agreementCode -eq 0) -and ($sigCode -eq 0)
 $status = if ($passed) { 'pass' } else { 'fail' }
 
 $result = [PSCustomObject]@{
     collabGate = [PSCustomObject]@{
         status = $status
         editValidationExitCode = $editCode
+        agreementValidationExitCode = $agreementCode
         signatureValidationExitCode = $sigCode
         editValidationJson = $editOut
+        agreementValidationJson = $agreementOut
         signatureValidationJson = $sigOut
     }
 }
@@ -41,6 +48,7 @@ if ($OutputJsonPath) {
 
 Write-Host "Collab Gate Status: $status"
 Write-Host "Edit validation exit code: $editCode"
+Write-Host "Agreement validation exit code: $agreementCode"
 Write-Host "Signature validation exit code: $sigCode"
 
 if ($passed) { exit 0 }
