@@ -6,7 +6,10 @@
     "a2-uuid"
   ],
   "conditionally_trusted_uids": [
-    "unknown"
+    "unknown",
+    "wijak-a1-scaffolder",
+    "b1c3-founder",
+    "copilot-a2-implementation"
   ],
   "blocked_uids": [
     "untrusted"

@@ -2,7 +2,7 @@
 
 role: a1-scaffold
 payload_path: SHARED.md
-payload_sha256: 108a0ba40678ec7a1a994e68dc74d6ccce943017e8858ca5134293aa53b9667c
+payload_sha256: 1f4c1b1b90daf81b6f9efad520613bc45e58e0b28321099b77a7e4f89453d428
 
 <!-- CHAIN-SIGNATURE:a1-scaffold:a1-uuid:2026-03-30T09:00:00Z:4b66edbf79d9c096275c26852758755f6601a20b2ac8be331173d5c371bf4dd0 -->
 A1 authored Task 001 scaffold handoff for shared file.

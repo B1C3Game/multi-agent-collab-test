@@ -1,0 +1,71 @@
+# MEMORY
+
+## 2026-04-02 Day 1 checkpoint
+
+### Objective
+Translate B1C3 identity into a live landing page through the pilot flow.
+
+### Flow executed
+B1C3 -> Wijak (A1 scaffold and identity input) -> Copilot (A2 implementation) -> Live EC2 artifact.
+
+### What worked
+- Identity before layout improved quality and reduced rework.
+- Deliberation block in SHARED.md produced high-signal brand constraints.
+- A1-to-A2 handoff stayed clear and executable.
+- Local build plus EC2 sync enabled rapid iteration and verification.
+
+### Outputs
+- Landing page v1 implemented in AWS-deploy/landing-page/index.html and AWS-deploy/landing-page/style.css.
+- Collaboration log updated in SHARED.md.
+- Live preview served from EC2 at http://13.61.184.3:8081/index.html.
+
+### Brand integrity checks passed
+- Philosophy-first framing.
+- Voice aligned to precise, principled, accessible.
+- No startup buzzword language.
+- Proof-oriented projects and explicit collaboration method.
+- CTA aligned to collaboration, not sales funnel.
+
+### Timing
+- Brand brief to live page: under 2 hours.
+
+### Decision for next cycle
+Keep the same protocol: define constraints -> scaffold identity and structure -> implement -> deploy preview -> review -> refine.
+
+## Day 2 template
+
+### Objective
+[What this cycle is trying to achieve]
+
+### Constraints
+- [Constraint 1]
+- [Constraint 2]
+- [Constraint 3]
+
+### Inputs
+- [A1 scaffold reference]
+- [Deliberation notes reference]
+- [Any external requirement]
+
+### Work executed
+- [Build step 1]
+- [Build step 2]
+- [Build step 3]
+
+### Outputs
+- [File/path]
+- [Live URL or test evidence]
+- [Review note]
+
+### Quality checks
+- Brand integrity: [pass/fail + note]
+- Accessibility baseline: [pass/fail + note]
+- Responsiveness baseline: [pass/fail + note]
+- Collaboration traceability: [pass/fail + note]
+
+### Risks and follow-up
+- [Risk 1]
+- [Risk 2]
+
+### Decision
+[What to continue, change, or stop next cycle]
