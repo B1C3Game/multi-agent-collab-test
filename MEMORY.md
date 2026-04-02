@@ -6,7 +6,7 @@
 Translate B1C3 identity into a live landing page through the pilot flow.
 
 ### Flow executed
-B1C3 -> Wijak (A1 scaffold and identity input) -> Copilot (A2 implementation) -> Live EC2 artifact.
+B1C3 -> Wijak (A1 scaffold and identity input) -> Copilot (A2 implementation) -> Live EC2 artifact -> GitHub Pages migration.
 
 ### What worked
 - Identity before layout improved quality and reduced rework.
@@ -17,7 +17,8 @@ B1C3 -> Wijak (A1 scaffold and identity input) -> Copilot (A2 implementation) ->
 ### Outputs
 - Landing page v1 implemented in AWS-deploy/landing-page/index.html and AWS-deploy/landing-page/style.css.
 - Collaboration log updated in SHARED.md.
-- Live preview served from EC2 at http://13.61.184.3:8081/index.html.
+- Historical Day 1 preview served from EC2 at http://13.61.184.3:8081/index.html.
+- Primary live site migrated to GitHub Pages at https://www.b1c3.dev/.
 
 ### Brand integrity checks passed
 - Philosophy-first framing.
@@ -41,10 +42,12 @@ Keep the same protocol: define constraints -> scaffold identity and structure ->
 
 ### Completion status
 - Commit live: 9c541906d99ceff00456d7460ed43617a39fcb58
-- Commit narrative: B1C3 identity brief -> A1 scaffold -> A2 implementation -> live landing page on EC2.
+- Commit narrative: B1C3 identity brief -> A1 scaffold -> A2 implementation -> live landing page on EC2 -> migrated to GitHub Pages HTTPS.
 - Gate status: pass (all validation checks)
-- Live preview: http://13.61.184.3:8081/index.html
+- Primary live URL: https://www.b1c3.dev/
+- Historical EC2 URL: http://13.61.184.3:8081/index.html
 - Attribution chain: B1C3 -> Wijak (scaffold) -> Copilot (build) -> verified
+- Infra state: EC2 preview port closed, instance stopped after successful migration
 
 ### Day 1 metrics
 
