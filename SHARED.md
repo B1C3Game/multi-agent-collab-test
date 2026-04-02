@@ -188,3 +188,40 @@ Implemented v1 landing page locally and synced to EC2.
 
 - Uses real identity guidance from Wijak input.
 - Avoids buzzword language and startup generic framing.
+
+<!-- EDIT
+UID: b1c3-founder
+TIMESTAMP: 2026-04-02T13:56:00Z
+INTENT: Log Day 1 operational friction and constraints discovered during pilot
+EDITOR: B1C3
+-->
+
+## Day 1 Operational Friction Log
+
+**Discovered constraints and challenges that may affect Day 2-3 workflow:**
+
+### SSH and Network Connectivity
+- **Cloud agent SSH limitation:** Wijak (cloud-hosted AI agent) cannot SSH directly into EC2 from sandboxed execution environment, despite correct key and security group rules. Likely due to egress IP masking or firewall restrictions in the execution environment.
+  - **Workaround:** B1C3 relays commands via terminal output (async but functional)
+  - **Impact:** Reduces real-time debugging but does not block async collaboration
+  - **Risk:** If live collaboration becomes critical, this becomes a blocker
+
+### VS Code Remote SSH Performance
+- **CPU spike under VS Code SSH:** Running the VS Code Remote SSH plugin creates sustained high CPU load on t3.micro instance.
+  - **Observed:** Connection stability issues, periodic disconnects during active editing
+  - **Likely cause:** VS Code indexing plus file watching on shared filesystem plus network overhead
+  - **Mitigation options:**
+    1. Use SSH terminal only (not VS Code plugin) for Day 2-3
+    2. Exclude node_modules/.git from VS Code workspace settings
+    3. Scale to t3.medium if performance does not improve (cost trade-off)
+  - **Decision needed:** Stick with CLI workflow or adjust VS Code settings?
+
+### Implications for Pilot Success
+- **Current workflow (CLI relay) works well** for proof-of-concept but does not represent ideal real-time collaboration
+- **Performance under VS Code SSH** may degrade if multiple agents edit simultaneously
+- **Network assumptions:** Original plan assumed all agents could SSH directly, reality is more constrained
+
+### Recommendation for Days 2-3
+1. Continue CLI-based relay workflow (proven stable)
+2. If direct SSH access needed, adjust security group to allow broader IP ranges or use AWS Systems Manager Session Manager (no SSH key required)
+3. Monitor CPU and memory metrics daily, document any new incidents
