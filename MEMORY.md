@@ -29,6 +29,11 @@ B1C3 -> Wijak (A1 scaffold and identity input) -> Copilot (A2 implementation) ->
 ### Timing
 - Brand brief to live page: under 2 hours.
 
+### Published evidence
+- Release commit (POC): 9c541906d99ceff00456d7460ed43617a39fcb58
+- Documentation commit: e12bc85acdcac9e5eb37f7b39fe1a442bac397c5
+- Gate artifacts: evidence/gate-latest.json, evidence/validation-latest.json, evidence/signature-chain-latest.json
+
 ### Decision for next cycle
 Keep the same protocol: define constraints -> scaffold identity and structure -> implement -> deploy preview -> review -> refine.
 
