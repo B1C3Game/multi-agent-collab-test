@@ -67,6 +67,20 @@ Participants:
 - Wijak (A1 scaffolder)
 - Copilot (A2 builder)
 
+## Day 1 Release Proof
+
+- Date: 2026-04-02
+- Commit: 9c541906d99ceff00456d7460ed43617a39fcb58
+- Summary: B1C3 identity brief -> A1 scaffold -> A2 implementation -> live landing page on EC2.
+- Live preview: http://13.61.184.3:8081/index.html
+- Gate status: pass (edit validation, agreement validation, signature-chain validation)
+
+## Next Planned Step
+
+To handle collaboration when one participant cannot use GitHub directly, use the AWS shared workspace pilot runbook:
+
+- `AWS-SHARED-WORKSPACE-PILOT.md`
+
 ## Standards Alignment
 
 This project does not replace existing standards. It layers on top of them.
