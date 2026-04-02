@@ -179,6 +179,32 @@ h1 {
   color: var(--ink-soft);
 }
 
+.proof-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.proof-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: rgba(243, 241, 234, 0.6);
+}
+
+blockquote.proof-result {
+  margin: 1.2rem 0 0;
+  padding: 0.9rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(31, 75, 110, 0.07);
+  border-radius: 0 8px 8px 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.88rem;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
 .steps {
   padding-left: 1.2rem;
 }
@@ -232,12 +258,16 @@ a:focus-visible,
   animation-delay: 0.34s;
 }
 
+#proof {
+  animation-delay: 0.44s;
+}
+
 #collaborate {
-  animation-delay: 0.46s;
+  animation-delay: 0.54s;
 }
 
 .site-footer {
-  animation-delay: 0.56s;
+  animation-delay: 0.64s;
 }
 
 @keyframes reveal {
@@ -249,7 +279,8 @@ a:focus-visible,
 
 @media (max-width: 840px) {
   .principles,
-  .cards {
+  .cards,
+  .proof-grid {
     grid-template-columns: 1fr;
   }
 

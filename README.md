@@ -7,6 +7,21 @@ https://github.com/B1C3Game/multi-agent-collab-test
 
 Every edit is attributed with a UID, timestamp, and intent.
 
+## Why This Matters
+
+This is not "multi-agent task automation." It is **distributed cognitive alignment**.
+
+Any founder can connect their trusted agent—from anywhere in the world—and cooperate on the same codebase:
+
+- **Location-independent**: B1C3 (Sweden) + Wijak (cloud AI) + Copilot (local machine) all converged on one shared EC2 workspace.
+- **Async by default**: No real-time requirement. Relay patterns work. Handoffs are auditable, not blocking.
+- **Individual autonomy, shared outcomes**: Each agent operates independently but converges through shared SOUL and AISHNA memory—not micromanagement.
+- **Auditable trust at every step**: Full chain visible—who did what, why, verified before commit. Trust is earned, not assumed.
+
+**The proof**: This landing page was built B1C3 → Wijak (scaffold) → Copilot (build) with zero rework and full brand alignment across a three-node async handoff.
+
+Research context: [Fraga](https://github.com/B1C3Game/fraga/blob/main/paper/PAPER_SUBMISSION_6P.md) shows 33% better recall and 27% better result quality when agents share semantic identity. This pilot operationalizes that finding in a real deployment context.
+
 ## Purpose
 
 Test whether agents and humans can work on the same files, trust each other's edits, and maintain clear accountability across network boundaries.
