@@ -86,9 +86,9 @@ Participants:
 
 - Date: 2026-04-02
 - Commit: 9c541906d99ceff00456d7460ed43617a39fcb58
-- Summary: B1C3 identity brief -> A1 scaffold -> A2 implementation -> live landing page on EC2.
-- GitHub Pages (HTTPS): https://b1c3game.github.io/multi-agent-collab-test/
-- Live preview: http://13.61.184.3:8081/index.html
+- Summary: B1C3 identity brief -> A1 scaffold -> A2 implementation -> landing page first deployed on EC2, then migrated to GitHub Pages (HTTPS).
+- Primary live site (GitHub Pages): https://b1c3game.github.io/multi-agent-collab-test/
+- Historical origin (EC2 Day 1 preview): http://13.61.184.3:8081/index.html
 - Gate status: pass (edit validation, agreement validation, signature-chain validation)
 
 ## Next Planned Step
