@@ -6,3 +6,9 @@ evidence/*latest.json
 evidence/gate-edit-validation.json
 evidence/gate-signature-validation.json
 evidence/gate-agreement-validation.json
+
+# Local private workspace (do not commit)
+0/
+
+# Local AWS key material (never commit)
+AWS-deploy/*.pem
