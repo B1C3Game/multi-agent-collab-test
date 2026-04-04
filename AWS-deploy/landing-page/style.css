@@ -201,12 +201,23 @@ h1 {
   height: 0.92rem;
 }
 
+.openclaw-badge circle,
 .openclaw-badge path {
   fill: none;
   stroke: var(--accent);
-  stroke-width: 1.6;
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.openclaw-badge a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.openclaw-badge a:hover {
+  text-decoration: underline;
 }
 
 .proof-grid {
