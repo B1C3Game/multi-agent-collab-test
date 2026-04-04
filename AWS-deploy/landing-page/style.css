@@ -215,17 +215,88 @@ blockquote.proof-result {
 }
 
 .motif svg {
-  width: min(320px, 100%);
+  width: min(360px, 100%);
   height: auto;
+  transform: perspective(700px) rotateX(8deg) rotateY(-10deg);
+  transform-origin: 50% 50%;
 }
 
-.motif circle {
-  fill: var(--accent-alt);
+.motif .edge {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.motif line {
-  stroke: var(--accent);
+.motif .edge-main {
+  stroke: url(#edgeGlow);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 1px 1px rgba(19, 31, 41, 0.45));
+}
+
+.motif .edge-soft {
+  stroke: #7f8f9c;
+  stroke-width: 1.5;
+  opacity: 0.72;
+}
+
+.motif .edge-dashed {
+  stroke: #b38966;
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+  opacity: 0.8;
+}
+
+.motif .node {
+  stroke: #f4efe4;
+  stroke-width: 1.8;
+}
+
+.motif .depth-back {
+  opacity: 0.7;
+  filter: blur(0.2px);
+}
+
+.motif .depth-front {
+  filter: drop-shadow(0 2px 3px rgba(16, 25, 33, 0.35));
+}
+
+.motif .node-core {
+  fill: #111111;
+  stroke: #f6f1e8;
   stroke-width: 2;
+}
+
+.motif .node-cold {
+  fill: url(#nodeCold);
+}
+
+.motif .node-warm {
+  fill: #c68657;
+}
+
+.motif .node-anchor {
+  fill: #263844;
+}
+
+.motif .node-orbit {
+  stroke: #1a2530;
+  stroke-width: 1.2;
+}
+
+.motif .node-orbit-1 {
+  fill: #f2dfbf;
+}
+
+.motif .node-orbit-2 {
+  fill: #d8e7f3;
+}
+
+.motif .node-orbit-3 {
+  fill: #f3d8c6;
+}
+
+.motif .node-orbit-4 {
+  fill: #e3ead2;
 }
 
 .micro {
