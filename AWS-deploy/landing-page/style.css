@@ -179,6 +179,36 @@ h1 {
   color: var(--ink-soft);
 }
 
+.source-note {
+  margin-top: 0.5rem;
+}
+
+.openclaw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(243, 241, 234, 0.65);
+  color: var(--ink-soft);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+}
+
+.openclaw-badge svg {
+  width: 0.92rem;
+  height: 0.92rem;
+}
+
+.openclaw-badge path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .proof-grid {
   margin-top: 1rem;
   display: grid;
