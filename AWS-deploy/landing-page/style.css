@@ -249,86 +249,48 @@ blockquote.proof-result {
 .motif svg {
   width: min(360px, 100%);
   height: auto;
-  transform: perspective(700px) rotateX(8deg) rotateY(-10deg);
+  transform: perspective(760px) rotateX(7deg) rotateY(-8deg);
   transform-origin: 50% 50%;
 }
 
-.motif .edge {
+.motif .rail {
   fill: none;
+  stroke: #73879a;
+  stroke-width: 1.6;
+  opacity: 0.62;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.motif .edge-main {
-  stroke: url(#edgeGlow);
-  stroke-width: 2.5;
-  filter: drop-shadow(0 1px 1px rgba(19, 31, 41, 0.45));
+.motif .rail-soft {
+  stroke-width: 1.2;
+  opacity: 0.46;
 }
 
-.motif .edge-soft {
-  stroke: #7f8f9c;
-  stroke-width: 1.5;
-  opacity: 0.72;
+.motif .motif-spokes {
+  filter: drop-shadow(0 1px 1px rgba(24, 34, 44, 0.24));
 }
 
-.motif .edge-dashed {
-  stroke: #b38966;
-  stroke-width: 1.5;
-  stroke-dasharray: 5 5;
-  opacity: 0.8;
+.motif .spoke {
+  fill: url(#motifSpoke);
+  opacity: 0.92;
 }
 
 .motif .node {
-  stroke: #f4efe4;
-  stroke-width: 1.8;
+  stroke: #f2eee5;
+  stroke-width: 1.6;
 }
 
-.motif .depth-back {
-  opacity: 0.7;
-  filter: blur(0.2px);
+.motif .node-light {
+  fill: url(#motifNodeLight);
+  opacity: 0.9;
 }
 
-.motif .depth-front {
-  filter: drop-shadow(0 2px 3px rgba(16, 25, 33, 0.35));
-}
-
-.motif .node-core {
-  fill: #111111;
-  stroke: #f6f1e8;
+.motif .node-emphasis {
+  fill: url(#motifCenter);
+  stroke: #fbf8f0;
   stroke-width: 2;
-}
-
-.motif .node-cold {
-  fill: url(#nodeCold);
-}
-
-.motif .node-warm {
-  fill: #c68657;
-}
-
-.motif .node-anchor {
-  fill: #263844;
-}
-
-.motif .node-orbit {
-  stroke: #1a2530;
-  stroke-width: 1.2;
-}
-
-.motif .node-orbit-1 {
-  fill: #f2dfbf;
-}
-
-.motif .node-orbit-2 {
-  fill: #d8e7f3;
-}
-
-.motif .node-orbit-3 {
-  fill: #f3d8c6;
-}
-
-.motif .node-orbit-4 {
-  fill: #e3ead2;
+  filter: drop-shadow(0 2px 2px rgba(18, 25, 32, 0.28));
 }
 
 .micro {
